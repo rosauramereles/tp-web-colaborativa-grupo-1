@@ -1,13 +1,7 @@
-
-
-/* Estilos geral del cuerpo de la página web:
-    colores base, tipografía
- y estructura principal de la página */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f5e6d3;
-     color: #4b2e2e;
+    color: #4b2e2e;
 
     /* Utilizamos flex para organizar header, main y footer en columna */
     display: flex;
@@ -71,28 +65,33 @@ main {
     padding: 40px 20px;
 }
 
-/*Sección principal:contenido de la Bienvenida */
+/* Sección principal del contacto */
 section {
-    background-color: #fff8f2;;
+    background-color: #fff8f2;
     width: 90%;
     max-width: 900px;
     padding: 30px;
     border-radius: 20px;
 
-    /* Usamos flexblox para ordenar contenido en columna*/
+    /* usamos flex para ordenar todo en columna */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     gap: 20px;
 
     box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-/* Título de la Bienvenida */
+/* Título principal de contacto */
 section h2 {
+    text-align: center;
     font-size: 2rem;
     color: #6b4f3f;
+}
+
+/* Subtítulos como contacto, email, ubicación, horario */
+section h3 {
+    color: #6b4f3f;
+    margin-top: 10px;
 }
 
 /* Texto de los párrafos */
@@ -101,23 +100,66 @@ section p {
     line-height: 1.6;
 }
 
-/* Imagen principal del sitio: ajustamos tamaño y agregamos efectos */
-.ImagenPrincipal {
+/* Imagen dentro de contacto */
+section img {
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     border-radius: 15px;
+    align-self: center;
     transition: 0.3s;
 }
 
-/* Agregamos efectos hover en la imagen, para cuando pasa el mouse */
-.ImagenPrincipal:hover {
+/* Efecto al pasar el mouse en la imagen */
+section img:hover {
     transform: scale(1.03);
 }
 
-/*Footer (pie de página)*/
+/* Mapa */
+section iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    border: none;
+}
+
+/* Footer (pie de página)*/
 footer {
-    background-color:#a67c5b;;
+    background-color:#a67c5b;
     color: white;
     text-align: center;
     padding: 15px;
+}
+
+/* Imagen del instagram en footer */
+footer img {
+    margin-bottom: 8px;
+}
+
+/* Responsive para celular */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .menu-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        width: 95%;
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    section iframe {
+        height: 220px;
+    }
 }
